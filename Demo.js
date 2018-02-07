@@ -1,5 +1,3 @@
-var melement = document.querySelector("#du");
-///////////////////////////////////////////
 var appendhtml = function(melement, mhtml){
     melement.inserAdjacentHtml(melement,mhtml);
 }

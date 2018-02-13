@@ -1,7 +1,8 @@
+//插入html///////////////////////////////////////////////////////////////////////
 var appendhtml = function(melement, mhtml){
-    melement.inserAdjacentHtml(melement,mhtml);
+    melement.insertAdjacentHTML('beforeend', mhtml);
 }
-//插入html函数
+/////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////
 var myajax = function(method, path, data, callback){
     var xmlthml = new XMLHttpRequest();
@@ -14,6 +15,7 @@ var myajax = function(method, path, data, callback){
     xmlthml.send(data);
 }
 //ajax函数
+/////////////////////////////////////////////////////////////////////////
 var removeallclass = function(classname){
     var selector = "."+classname;
     var elements = document.querySelectorAll(selector);
@@ -23,10 +25,12 @@ var removeallclass = function(classname){
     }
 }
 //删除所有的class
+//绑定单个元素的单击事件////////////////////////////////////////////////////////////
 var bindevent = function(selector, event, callback){
     this.element = document.querySelector(selector);
     element.addEventListener(event, callback);
 }
+/////////////////////////////////////////////////////////////////////////
 //绑定单个事件
 var bindallevent = function(selector, event, callback){
     this.elements = document.querySelectorAll(selector);

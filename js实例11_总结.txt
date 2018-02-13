@@ -1,0 +1,5 @@
+一、元素
+    1、取得单个元素用document.querySelector('.xxx');
+    2、取得所有该元素用document.querySelectorAll('#xxx');
+    3、取得该元素内的元素用xxx.querySelector('.yyy');
+    4、取得父级元素用xxx.parentElement;

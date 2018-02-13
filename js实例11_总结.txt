@@ -3,3 +3,32 @@
     2、取得所有该元素用document.querySelectorAll('#xxx');
     3、取得该元素内的元素用xxx.querySelector('.yyy');
     4、取得父级元素用xxx.parentElement;
+    5、取得元素最近的一个元素xxx.closest(".yyy");
+    6、删除一个元素xxx.remove();
+
+二、标签内变量
+    1、xxx表示标签内变量<span id="todocon">${xxx}</span>
+    2、调用时可做成函数变量引入
+        var inserthtml = function(xxx, yyy){
+            return t =`
+            <div class="todo ${xxx}" value="">
+                <button type="button" class="btdone">done</button>
+                <button type="button" class="btdelete">delete</button>
+                <span id="todocon">${yyy}</span>
+            </div>`
+        } 
+    3、标签内插入html：
+        var appendhtml = function(melement, mhtml){
+                melement.insertAdjacentHTML('beforeend', mhtml);
+        }
+    4、取出标签内的内容：
+        element.innerHTML;
+
+三、JSON
+    1、把数组变在字符串JSON.stringify(arr);
+    2、把字符串变成数组JSON.parse(str);
+
+四、CSS
+    1、元素内是否包含某CSS：element.classList.contains('xxx')
+    2、元素添加CSS：element.classList.add('xxx');
+    3、元素删除CSS：element.classList.remove('xxx');

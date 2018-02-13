@@ -30,8 +30,6 @@ function savetodos(){
     for (let i = 0; i < todos.length; i++) {
         var element = todos[i];
         var gettodocon = element.querySelector('#todocon').innerHTML;
-        console.log('ffff'+gettodocon);
-        
         var delebo = element.classList.contains('tododone');
         var todoarr = {
             con:gettodocon,
@@ -60,7 +58,11 @@ divcontainer.addEventListener('click', function(event){
     }
     if (tg.classList.contains('btdone')) {
         var tgpl = tg.parentElement;
-        tgpl.classList.add('tododone');
+        if (tgpl.classList.contains('tododone')) {
+            tgpl.classList.remove('tododone');
+        } else {
+        tgpl.classList.add('tododone');}
+
         savetodos();
     }
 })

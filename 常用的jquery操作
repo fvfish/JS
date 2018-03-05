@@ -1,0 +1,17 @@
+一、DOM
+    1、$(this)//当前项，有each循环中常有到。
+二、html相关
+    1、$('.container').append(htmltext);//元素内追加加html
+    2、$('.container').html(htmltext);//元素内添加html
+三、CSS相关
+    1、元素的父元素$(this).parent("p")
+    2、元素的子元素$(this).children("p");
+    3、元素的同位元素$(this).siblings("p");
+    4、元素的子元素$(this).find("p");//不管是哪一层的所有子元素
+    5、是否存在css:$(this).hasClass("p");//返回的是一个布尔值
+四、循环相关
+    1、$.each(arrstr, function (indexInArray) { });
+    2、$('.done').each(function (index, element) {  });
+五、箭头函数
+    1、const savetodo=()=>{}
+    2、var inserhtml = (mytodo, gettodo) =>{}

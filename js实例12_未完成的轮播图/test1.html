@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="head.js"></script>
+    <style>
+        .gunimg{
+            display: none;        
+        }
+        .gun{
+            position: relative;
+            display: inline-block;
+            text-align: center;
+        }
+        .active{
+            display: block;
+        }
+        #btnext{
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            right: 0px;
+            top: 50%;
+            transform: translateY(-50%);
+            /* 以当前位置位移 */
+        }
+        .slidein{
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: blueviolet;
+            float: left;
+            margin-left: 5px;
+        }
+        .slideselect{
+            background-color: antiquewhite;
+        }
+        .slide{
+            display: inline-block;
+            position: absolute;
+            bottom: 10px;
+            transform: translateX(-50%);
+        }
+    </style>
+    <title>轮播图</title>
+</head>
+<body>
+    <div class="gun" data-imgs=3 data-active=0>
+        <img id="imgs-0" class="gunimg active" src="images/1.jpg" alt="">
+        <img id="imgs-1" class="gunimg" src="images/2.jpg" alt="">
+        <img id="imgs-2" class="gunimg" src="images/3.jpg" alt="">
+        <button type="button" id="btnext">next</button>
+        <div class="slide">
+            <div class="slidein slideselect"></div>
+            <div class="slidein"></div>
+            <div class="slidein"></div>
+        </div>
+    </div>
+    <script src="test1.js"></script>
+</body>
+</html>

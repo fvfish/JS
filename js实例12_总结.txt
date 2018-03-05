@@ -1,0 +1,4 @@
+一、HTML中自定义属性
+    1、html中的自定义属性写法： <div class="gun" data-imgs=3 data-active=0>
+    2、自定义属性在js里的调用：element.dataset.imgs = XXX;
+    3、自定义的属性均为字符串型。
